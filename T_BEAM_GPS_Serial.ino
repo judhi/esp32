@@ -26,6 +26,8 @@ void loop() {
   }
 
   while (GPSSerial.available()) {
+    char c = GPSSerial.read();
+    Serial.write(c);    
     if (gps.encode(GPSSerial.read())) {
       if (gps.location.isValid()) {
         Serial.print("Latitude/Longitude: ");
@@ -35,4 +37,5 @@ void loop() {
       }
     }
   }
+  delay(2000);
 }
