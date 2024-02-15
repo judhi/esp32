@@ -1,6 +1,3 @@
-// Code to get GPS coordinates on TTGO T-BEAM
-// and send them to Bluetooth terminal
-
 #include <HardwareSerial.h>
 #include <TinyGPS++.h>
 #include <BluetoothSerial.h>
