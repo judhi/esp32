@@ -25,10 +25,10 @@ void loop() {
     GPSSerial.write(c);
   }
   
+  SerialBT.print("Latitude/Longitude: ");
   while (GPSSerial.available()) {
     if (gps.encode(GPSSerial.read())) {
       if (gps.location.isValid()) {
-        SerialBT.print("Latitude/Longitude: ");
         SerialBT.print(gps.location.lat(), 6);
         SerialBT.print("/");
         SerialBT.println(gps.location.lng(), 6);
