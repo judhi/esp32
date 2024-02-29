@@ -66,7 +66,7 @@ void loop() {
     }
     String field2Value = getFieldData(url, 2);
     if (!field1Value.isEmpty()) {
-      Serial.println("Value of 'field2': " + field1Value);
+      Serial.println("Value of 'field2': " + field2Value);
     }
   }
 
